@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0a0a0b;
+  --color-brand-accent: #ea580c;
+  --color-brand-surface: #18181b;
+  --color-brand-border: #27272a;
+  
+  --color-text-main: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@layer base {
+  :root {
+    --background: #0a0a0b;
+    --foreground: #f4f4f5;
+    --accent: #ea580c;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased overflow-x-hidden font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Agent 1 — Global Scaling Foundation */
+  font-size: clamp(13px, 0.8vw, 16px);
+}
+
+/* Agent 2 — Safe Image Stabilization */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Agent 4 — Hero Height Constraint (non-destructive) */
+.hero-section {
+  max-height: clamp(420px, 60vh, 720px);
+}
+
+/* Agent 5 — Viewport Safety Fix */
+.main-safe {
+  min-height: fit-content;
+}
+
+section[id] {
+  scroll-margin-top: 0px;
+}
+
+/* Scrollbar Customizada Premium */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+
+.noise-bg {
+  @apply fixed inset-0 pointer-events-none opacity-[0.03] z-[9999];
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-brand-surface border border-brand-border rounded-[2rem] transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-brand-accent/50 hover:shadow-2xl hover:shadow-brand-accent/20;
+    /* Agent 3 — Controlled Spacing Normalization */
+    padding: clamp(12px, 1.5vw, 32px);
+  }
+  
+  .btn-primary {
+    @apply bg-brand-accent hover:bg-brand-accent/90 text-black rounded-2xl font-black text-lg flex items-center justify-center gap-3 transition-all duration-300 ease-out hover:scale-105 active:scale-95 hover:shadow-2xl shadow-brand-accent/30;
+    /* Agent 3 — Controlled Spacing Normalization */
+    padding: clamp(12px, 1.5vw, 32px);
+  }
+  
+  .btn-outline {
+    @apply bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all duration-300 ease-out hover:scale-105 active:scale-95 hover:shadow-xl;
+  }
+}
