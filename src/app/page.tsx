@@ -226,7 +226,7 @@ export default function Home() {
                      </motion.div>
                      <motion.div {...slideUp} className="relative mt-12 md:mt-0">
                         <div className="aspect-square rounded-[3rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl group relative">
-                           <Image src="/images/gallery/5.jpeg" alt="Técnico especializado em Conserto de Sacadas de Vidro - RA Manutenção" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                           <Image src="/images/gallery/5.jpeg" alt="Técnico especializado em Conserto de Sacadas de Vidro - RA Manutenção" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 500px" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                         </div>
                         <div className="absolute -bottom-6 -right-2 md:-bottom-10 md:-right-10 bg-brand-accent p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] text-white shadow-2xl w-[90%] sm:max-w-[280px] md:max-w-xs md:w-auto">
                            <div className="flex gap-1 text-white mb-4">
