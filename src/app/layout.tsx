@@ -2,29 +2,44 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Balcony Maintenance in São Paulo | RA Manutenção de Sacadas",
-  description:
-    "Especialistas em manutenção de sacadas em São Paulo. Serviços de impermeabilização, vedação, inspeção técnica e segurança estrutural para condomínios e residências.",
+  metadataBase: new URL('https://www.ramanutencaodesacadas.com.br'),
+  title: {
+    default: "RA Manutenção de Sacadas | Vedação, Roldanas e Segurança em SP",
+    template: "%s | RA Manutenção de Sacadas"
+  },
+  description: "Especialista em manutenção de sacadas em São Paulo. Vedação contra infiltração, troca de roldanas, inspeção técnica com ART e segurança estrutural. Atendimento em 24h para condomínios.",
   keywords: [
-    "manutenção de sacadas",
     "manutenção de sacadas SP",
-    "impermeabilização de sacadas",
-    "vedação de sacadas",
-    "infiltração sacada",
+    "conserto de sacadas de vidro",
+    "vedação de sacadas contra chuva",
     "troca de roldanas sacada",
-    "inspeção técnica sacadas",
-    "laudo técnico sacadas",
-    "segurança em sacadas",
-    "manutenção predial SP"
+    "impermeabilização de sacadas",
+    "laudo técnico sacadas SP",
+    "manutenção varanda gourmet",
+    "segurança de sacadas",
+    "RA Manutenção de Sacadas",
+    "empresa de manutenção predial SP"
   ],
   authors: [{ name: "RA Manutenção de Sacadas" }],
   creator: "RA Manutenção de Sacadas",
   publisher: "RA Manutenção de Sacadas",
-  metadataBase: new URL("https://www.ramanutencaodesacadas.com.br"),
+  alternates: {
+    canonical: "https://www.ramanutencaodesacadas.com.br",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "RA Manutenção de Sacadas | Segurança e Alta Performance",
-    description:
-      "Serviços profissionais de manutenção de sacadas com foco em vedação, impermeabilização e segurança estrutural em São Paulo.",
+    title: "RA Manutenção de Sacadas | Líder em Segurança e Vedação em SP",
+    description: "Serviços técnicos especializados com garantia e mão de obra própria em São Paulo. Proteja seu patrimônio contra infiltrações.",
     url: "https://www.ramanutencaodesacadas.com.br",
     siteName: "RA Manutenção de Sacadas",
     locale: "pt_BR",
@@ -34,21 +49,63 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.png",
         width: 1200,
         height: 630,
-        alt: "Manutenção de sacadas profissional"
+        alt: "Manutenção técnica de sacadas profissional"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Manutenção de Sacadas em SP | RA Manutenção",
-    description:
-      "Especialistas em vedação, impermeabilização e manutenção de sacadas com segurança garantida.",
+    description: "Especialistas em vedação, impermeabilização e manutenção de sacadas com segurança garantida.",
     images: ["/images/hero-bg.png"]
-  },
-  robots: {
-    index: true,
-    follow: true
   }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.ramanutencaodesacadas.com.br/#organization",
+      "name": "RA Manutenção de Sacadas",
+      "url": "https://www.ramanutencaodesacadas.com.br",
+      "telephone": "+5511993803195",
+      "email": "contato@ramanutencaodesacadas.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.55052,
+        "longitude": -46.633308
+      },
+      "areaServed": [
+        { "@type": "City", "name": "São Paulo" },
+        { "@type": "City", "name": "Santo André" },
+        { "@type": "City", "name": "São Bernardo do Campo" },
+        { "@type": "City", "name": "São Caetano do Sul" },
+        { "@type": "City", "name": "Guarulhos" },
+        { "@type": "City", "name": "Osasco" }
+      ],
+      "image": "https://www.ramanutencaodesacadas.com.br/images/hero-bg.png",
+      "priceRange": "$$"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Manutenção de Sacadas",
+      "provider": { "@id": "https://www.ramanutencaodesacadas.com.br/#organization" },
+      "description": "Manutenção completa de sistemas de envidraçamento de sacadas, incluindo troca de roldanas e alinhamento."
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Vedação e Impermeabilização",
+      "provider": { "@id": "https://www.ramanutencaodesacadas.com.br/#organization" },
+      "description": "Vedação técnica contra infiltrações de chuva e proteção de estruturas metálicas em sacadas."
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -61,34 +118,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "RA Manutenção de Sacadas",
-              image: "https://www.ramanutencaodesacadas.com.br/images/hero-bg.png",
-              url: "https://www.ramanutencaodesacadas.com.br",
-              telephone: "+55 11 99380-3195",
-              email: "contato@ramanutencao.com.br",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "São Paulo",
-                addressRegion: "SP",
-                addressCountry: "BR"
-              },
-              description:
-                "Empresa especializada em manutenção de sacadas, impermeabilização, vedação, inspeção técnica e segurança estrutural.",
-              areaServed: "São Paulo e Grande SP",
-              services: [
-                "Manutenção de sacadas",
-                "Impermeabilização",
-                "Vedação",
-                "Inspeção técnica",
-                "Laudos técnicos",
-                "Troca de roldanas"
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>

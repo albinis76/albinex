@@ -44,6 +44,13 @@ html {
   font-size: clamp(13px, 0.8vw, 16px);
 }
 
+/* Mobile Font Fix: 0.8vw on a 375px screen = ~3px. Override to sane base size. */
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 /* Agent 2 — Safe Image Stabilization */
 img {
   max-width: 100%;
@@ -51,9 +58,16 @@ img {
   object-fit: cover;
 }
 
-/* Agent 4 — Hero Height Constraint (non-destructive) */
+/* Agent 4 — Hero Height Constraint (desktop only, non-destructive) */
 .hero-section {
   max-height: clamp(420px, 60vh, 720px);
+}
+
+/* Mobile: remove height cap so all hero content is fully visible */
+@media (max-width: 767px) {
+  .hero-section {
+    max-height: none;
+  }
 }
 
 /* Agent 5 — Viewport Safety Fix */

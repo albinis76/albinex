@@ -35,6 +35,7 @@ export default function Sidebar() {
               src="/images/brand/logo.jpeg"
               alt="Logo RA Manutenção"
               fill
+              sizes="48px"
               className="object-cover"
             />
           </div>
@@ -51,6 +52,7 @@ export default function Sidebar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           className="bg-brand-accent w-12 h-12 shrink-0 rounded-[1rem] flex items-center justify-center text-black shadow-lg active:scale-95 transition-transform"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,6 +75,7 @@ export default function Sidebar() {
                   src="/images/brand/logo.jpeg"
                   alt="Logo RA Manutenção de Sacadas"
                   fill
+                  sizes="96px"
                   className="object-cover"
                 />
               </div>
@@ -96,8 +99,8 @@ export default function Sidebar() {
                 href={item.href}
                 onClick={() => setActive(item.href)}
                 className={`flex items-center gap-4 px-4 py-4 rounded-2xl transition-all relative group ${active === item.href
-                    ? "text-white"
-                    : "text-zinc-500 hover:text-zinc-200"
+                  ? "text-white"
+                  : "text-zinc-400 hover:text-zinc-200"
                   }`}
               >
                 {active === item.href && (
@@ -138,7 +141,7 @@ export default function Sidebar() {
               <div className="text-white font-black uppercase tracking-widest">
                 +10 Anos
               </div>
-              <div className="text-zinc-500 font-medium text-[10px] mt-1">
+              <div className="text-zinc-400 font-medium text-[10px] mt-1">
                 Excelência Técnica
               </div>
             </div>
