@@ -311,7 +311,7 @@ export default function Home() {
             </section>
 
             <footer className="py-20 text-center border-t border-brand-border">
-               <div className="text-zinc-700 font-black text-xs uppercase tracking-[0.5em] mb-4 text-brand-accent">RA Manutenção de Sacadas</div>
+               <div className="text-brand-accent font-black text-xs uppercase tracking-[0.5em] mb-4">RA Manutenção de Sacadas</div>
                <p className="text-zinc-300 font-medium">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
                <p className="text-zinc-300 font-medium">
                   Desenvolvido por <a href="https://www.albinex.com.br/pt" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline decoration-brand-accent/30 hover:decoration-brand-accent transition-all">ALBINEX</a>

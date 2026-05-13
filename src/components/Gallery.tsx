@@ -127,7 +127,7 @@ export default function Gallery() {
               </div>
             </motion.div>
             
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 text-[10px] font-black uppercase tracking-[0.4em] pointer-events-none">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 text-[10px] font-black uppercase tracking-[0.4em] pointer-events-none">
               ESC para fechar
             </div>
           </motion.div>

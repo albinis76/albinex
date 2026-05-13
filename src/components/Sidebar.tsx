@@ -100,7 +100,7 @@ export default function Sidebar() {
                 onClick={() => setActive(item.href)}
                 className={`flex items-center gap-4 px-4 py-4 rounded-2xl transition-all relative group ${active === item.href
                   ? "text-white"
-                  : "text-zinc-300 hover:text-zinc-200"
+                  : "text-zinc-100 hover:text-zinc-200"
                   }`}
               >
                 {active === item.href && (
@@ -141,7 +141,7 @@ export default function Sidebar() {
               <div className="text-white font-black uppercase tracking-widest">
                 +10 Anos
               </div>
-              <div className="text-zinc-300 font-medium text-[10px] mt-1">
+              <div className="text-zinc-200 font-medium text-[10px] mt-1">
                 Excelência Técnica
               </div>
             </div>
