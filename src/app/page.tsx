@@ -95,7 +95,7 @@ export default function Home() {
                            RA Manutenção de Sacadas <br />
                            <span className="text-brand-accent">Conserto e Vedação</span> em SP
                         </h1>
-                        <p className="text-base md:text-xl text-zinc-400 font-medium mb-8 md:mb-10 max-w-3xl leading-relaxed">
+                        <p className="text-base md:text-xl text-zinc-300 font-medium mb-8 md:mb-10 max-w-3xl leading-relaxed">
                            Manutenção técnica especializada com foco em prevenção, vedações e integridade estrutural. Atendimento certificado para condomínios.
                         </p>
                         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full md:w-auto">
@@ -127,8 +127,8 @@ export default function Home() {
                         <Zap size={20} />
                      </div>
                      <div>
-                        <h4 className="text-white font-black text-base md:text-lg">Orçamento em até 24h</h4>
-                        <p className="text-zinc-500 text-xs">Avaliação rápida, sem burocracia.</p>
+                        <h2 className="text-white font-black text-base md:text-lg">Orçamento em até 24h</h2>
+                        <p className="text-zinc-300 text-xs">Avaliação rápida, sem burocracia.</p>
                      </div>
                   </div>
 
@@ -137,8 +137,8 @@ export default function Home() {
                         <ShieldCheck size={20} />
                      </div>
                      <div>
-                        <h4 className="text-white font-black text-base md:text-lg">Garantia Técnica</h4>
-                        <p className="text-zinc-500 text-xs">Serviço segurado em contrato.</p>
+                        <h2 className="text-white font-black text-base md:text-lg">Garantia Técnica</h2>
+                        <p className="text-zinc-300 text-xs">Serviço segurado em contrato.</p>
                      </div>
                   </div>
 
@@ -152,7 +152,7 @@ export default function Home() {
                      </div>
                      <div className="text-sm text-center">
                         <div className="text-white font-black">Satisfação Garantida</div>
-                        <div className="text-zinc-500 text-xs">100% de Aprovação</div>
+                        <div className="text-zinc-300 text-xs">100% de Aprovação</div>
                      </div>
                   </div>
                </div>
@@ -188,7 +188,7 @@ export default function Home() {
                            <service.icon size={32} />
                         </div>
                         <h3 className="text-2xl font-black text-white mb-4">{service.title}</h3>
-                        <p className="text-zinc-500 font-medium leading-relaxed mb-8">{service.desc}</p>
+                        <p className="text-zinc-300 font-medium leading-relaxed mb-8">{service.desc}</p>
                         <a href={`https://wa.me/5511993803195`} target="_blank" rel="noopener noreferrer" aria-label="Consultar serviço de manutenção" className="flex items-center gap-2 text-white font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
                            Consultar <ArrowUpRight size={18} />
                         </a>
@@ -217,8 +217,8 @@ export default function Home() {
                                     {idx + 1}
                                  </div>
                                  <div>
-                                    <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
-                                    <p className="text-zinc-500 font-medium">{item.desc}</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                    <p className="text-zinc-300 font-medium">{item.desc}</p>
                                  </div>
                               </div>
                            ))}
@@ -244,7 +244,7 @@ export default function Home() {
             <section id="galeria" className="px-6 md:pl-0 md:pr-6 py-16 md:py-24 w-full">
                <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-6">Manutenção de Sacadas Realizadas</h2>
-                  <p className="text-xl md:text-2xl text-zinc-400 font-medium max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-xl md:text-2xl text-zinc-300 font-medium max-w-2xl mx-auto leading-relaxed">
                      Veja na prática o padrão de qualidade e a excelência técnica dos nossos serviços.
                   </p>
                </div>
@@ -276,7 +276,7 @@ export default function Home() {
                   <div className="w-full md:w-1/2 bg-zinc-100 p-6 md:p-16 rounded-[3rem] md:rounded-[3.5rem]">
                      <form onSubmit={handleSendForm} className="space-y-6">
                         <div className="space-y-2">
-                           <label htmlFor="nome" className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Nome Completo</label>
+                           <label htmlFor="nome" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">Nome Completo</label>
                            <input
                               id="nome"
                               type="text"
@@ -288,7 +288,7 @@ export default function Home() {
                            />
                         </div>
                         <div className="space-y-2">
-                           <label htmlFor="whatsapp" className="text-[10px] font-black uppercase tracking-widest text-zinc-400">WhatsApp (DDD + Número)</label>
+                           <label htmlFor="whatsapp" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">WhatsApp (DDD + Número)</label>
                            <input
                               id="whatsapp"
                               type="tel"
@@ -300,7 +300,7 @@ export default function Home() {
                            />
                         </div>
                         <div className="space-y-2">
-                           <label htmlFor="mensagem" className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Descrição do Problema</label>
+                           <label htmlFor="mensagem" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">Descrição do Problema</label>
                            <textarea
                               id="mensagem"
                               placeholder="Descreva o que precisa..."
@@ -320,9 +320,9 @@ export default function Home() {
 
             <footer className="py-20 text-center border-t border-brand-border">
                <div className="text-zinc-700 font-black text-xs uppercase tracking-[0.5em] mb-4 text-brand-accent">RA Manutenção de Sacadas</div>
-               <p className="text-zinc-500 font-medium">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
-               <p className="text-zinc-500 font-medium">
-                  Desenvolvido por <a href="https://www.albinex.com.br/pt" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">ALBINEX</a>
+               <p className="text-zinc-300 font-medium">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
+               <p className="text-zinc-300 font-medium">
+                  Desenvolvido por <a href="https://www.albinex.com.br/pt" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline decoration-brand-accent/30 hover:decoration-brand-accent transition-all">ALBINEX</a>
                </p>
             </footer>
          </main>
