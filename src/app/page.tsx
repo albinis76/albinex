@@ -82,11 +82,7 @@ export default function Home() {
             {/* 1. HERO */}
             <section id="home" className="hero-section px-6 md:pl-0 md:pr-6 md:py-6 min-h-[100dvh] md:h-[100dvh] md:overflow-hidden flex items-center md:items-stretch pt-28 md:pt-6">
                <div className="grid lg:grid-cols-12 lg:grid-rows-[1fr_auto] gap-4 md:gap-6 w-full h-full">
-                  <motion.div
-                     initial={{ opacity: 0, scale: 0.9 }}
-                     animate={{ opacity: 1, scale: 1 }}
-                     className="lg:col-span-8 lg:row-span-1 bg-brand-surface border border-brand-border rounded-[3rem] p-8 md:p-10 xl:p-16 flex flex-col justify-center relative overflow-hidden group"
-                  >
+                  <div className="lg:col-span-8 lg:row-span-1 bg-brand-surface border border-brand-border rounded-[3rem] p-8 md:p-10 xl:p-16 flex flex-col justify-center relative overflow-hidden group">
                      <div className="relative z-10 flex flex-col items-center text-center">
                         <div className="flex items-center justify-center gap-4 text-brand-accent font-black uppercase tracking-[0.25em] text-sm md:text-base mb-6">
                            <div className="w-12 h-[2px] bg-brand-accent hidden md:block"></div> RA Manutenção de Sacadas <div className="w-12 h-[2px] bg-brand-accent hidden md:block"></div>
@@ -95,7 +91,7 @@ export default function Home() {
                            RA Manutenção de Sacadas <br />
                            <span className="text-brand-accent">Conserto e Vedação</span> em SP
                         </h1>
-                        <p className="text-base md:text-xl text-zinc-300 font-medium mb-8 md:mb-10 max-w-3xl leading-relaxed">
+                        <p className="text-base md:text-xl text-zinc-200 font-medium mb-8 md:mb-10 max-w-3xl leading-relaxed">
                            Manutenção técnica especializada com foco em prevenção, vedações e integridade estrutural. Atendimento certificado para condomínios.
                         </p>
                         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full md:w-auto">
@@ -107,20 +103,16 @@ export default function Home() {
                            </a>
                         </div>
                      </div>
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                     initial={{ opacity: 0, x: 50 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     className="lg:col-span-4 lg:row-span-1 relative rounded-[3rem] p-8 md:p-10 flex flex-col justify-between text-white shadow-2xl overflow-hidden group min-h-[300px] md:min-h-0"
-                  >
-                     <Image src="/images/hero-bg.png" alt="Manutenção de Sacadas e Vedação contra Chuva em SP - RA Manutenção" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 z-0" priority />
+                  <div className="lg:col-span-4 lg:row-span-1 relative rounded-[3rem] p-8 md:p-10 flex flex-col justify-between text-white shadow-2xl overflow-hidden group min-h-[300px] md:min-h-0">
+                     <Image src="/images/hero-bg.png" alt="Manutenção de Sacadas e Vedação contra Chuva em SP - RA Manutenção" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw" className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 z-0" priority />
                      <div className="absolute inset-0 bg-gradient-to-t from-brand-accent/95 via-brand-accent/60 to-black/20 z-0 mix-blend-multiply"></div>
                      <div className="absolute inset-0 bg-brand-dark/20 z-0"></div>
                      <div className="relative z-10 mt-auto pt-8 border-t border-white/20">
                         <p className="text-lg font-medium text-white/95 italic drop-shadow-md">"Referência em manutenção técnica de alto padrão em toda a grande SP"</p>
                      </div>
-                  </motion.div>
+                  </div>
 
                   <div className="lg:col-span-4 lg:row-start-2 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-4 md:p-6 flex items-center gap-3 md:gap-4">
                      <div className="w-10 h-10 md:w-12 md:h-12 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 text-white">
@@ -276,7 +268,7 @@ export default function Home() {
                   <div className="w-full md:w-1/2 bg-zinc-100 p-6 md:p-16 rounded-[3rem] md:rounded-[3.5rem]">
                      <form onSubmit={handleSendForm} className="space-y-6">
                         <div className="space-y-2">
-                           <label htmlFor="nome" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">Nome Completo</label>
+                           <label htmlFor="nome" className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Nome Completo</label>
                            <input
                               id="nome"
                               type="text"
@@ -288,7 +280,7 @@ export default function Home() {
                            />
                         </div>
                         <div className="space-y-2">
-                           <label htmlFor="whatsapp" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">WhatsApp (DDD + Número)</label>
+                           <label htmlFor="whatsapp" className="text-[10px] font-black uppercase tracking-widest text-zinc-600">WhatsApp (DDD + Número)</label>
                            <input
                               id="whatsapp"
                               type="tel"
@@ -300,7 +292,7 @@ export default function Home() {
                            />
                         </div>
                         <div className="space-y-2">
-                           <label htmlFor="mensagem" className="text-[10px] font-black uppercase tracking-widest text-zinc-300">Descrição do Problema</label>
+                           <label htmlFor="mensagem" className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Descrição do Problema</label>
                            <textarea
                               id="mensagem"
                               placeholder="Descreva o que precisa..."

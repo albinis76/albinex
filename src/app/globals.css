@@ -92,7 +92,6 @@ section[id] {
 
 .noise-bg {
   @apply fixed inset-0 pointer-events-none opacity-[0.03] z-[9999];
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
 }
 
 @layer components {
